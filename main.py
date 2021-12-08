@@ -33,6 +33,15 @@ def playRound():
             print("You Lose: Crap-Out!")
 
         print("You Rolled a", sum)
+def main():
+    if __name__ == '__main__':
+        playRound()
 
-if __name__ == '__main__':
-    playRound()
+while True:
+       main()
+       restart = input('\033[97mdo you want again?').lower()
+       if restart == "yes":
+           main()
+       else:
+           print("\033[91mGoodbye")
+           exit(0)
