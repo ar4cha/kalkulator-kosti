@@ -38,28 +38,41 @@ def playRound():
         print("You Rolled a", sum)
 
 
-def paraSkaitli():
-    p = 3*skaists
-    print("coming soon")
+def paraSkaitli(skaits):
+    print("Varbutiba para skaitli ir:" + str(1 * skaits) + "/" + str(2 * skaits))
 
 
-def neparskaitli():
-    print("coming soon")
+def neparskaitli(skaits):
+    print("Varbutiba nepars skaitli ir: " + str(1 * skaits) + "/" + str(2 * skaits))
 
 
-def vienadiskaitli():
-    print("coming soon")
+def vienadiskaitli(skaits):
+    print("Varbutiba vienad skaitli ir: " + str(1 * skaits) + "/" + str(6 * skaits))
 
 
-def divivienadi():
-    print("coming soon")
+def divivienadi(skaits):
+    kaulins = 1 * 2
+    print("Varbutiba divi vienadi skaitli ir: " + str(kaulins) + "/" + str(6 * skaits))
 
 
 
 def main():
     if __name__ == '__main__':
         print("sis i...")
-        playRound()
+        print("what do you want? \n1-is a varbutiba para skaitli\n2-varbutiba neparaskaitli\n3-varbutiba vienadiskaitli\n4-varbutiba divivienadi\n5-playRound")
+        metode = int(input("type 1-5:"))
+        skaits = int(input("how much dice"))
+        if metode == 1:
+            paraSkaitli(skaits)
+        if metode == 2:
+            neparskaitli(skaits)
+        if metode == 3:
+            vienadiskaitli(skaits)
+        if metode == 4:
+            divivienadi(skaits)
+        if metode == 5:
+            playRound()
+
 
 while True:
        main()
