@@ -1,4 +1,5 @@
 import random
+from pygame import mixer
 import time
 
 def playRound():
@@ -11,7 +12,9 @@ def playRound():
         die4 = random.randint(1,6)
         die5 = random.randint(1,6)
         sum = die1 + die2 + die3 + die4 +die5
-        time.sleep(1)
+        mixer.init()
+        mixer.music.load("kosti.mp3")
+        mixer.music.play()
         print("first throw:", die1)
         time.sleep(1)
         print("second throw:", die2)
@@ -33,8 +36,29 @@ def playRound():
             print("You Lose: Crap-Out!")
 
         print("You Rolled a", sum)
+
+
+def paraSkaitli():
+    p = 3*skaists
+    print("coming soon")
+
+
+def neparskaitli():
+    print("coming soon")
+
+
+def vienadiskaitli():
+    print("coming soon")
+
+
+def divivienadi():
+    print("coming soon")
+
+
+
 def main():
     if __name__ == '__main__':
+        print("sis i...")
         playRound()
 
 while True:
